@@ -1,6 +1,17 @@
-Para rodar esse projet o localmente em uma maquina windows:
-você pode usar o npm se tiver o node js instalado
+Executando o Projeto Localmente (Windows)
 
-abra um terminal na pasta do projeto e apenas rode o código: npm run dev
+Para executar este projeto localmente em uma máquina com Windows, certifique-se de ter o Node.js instalado.
 
-e acesse em algum navegador o link localhost:3000
+Abra um terminal na pasta raiz do projeto.
+
+Execute o seguinte comando para iniciar a aplicação:
+
+npm run dev
+
+
+Abra um navegador e acesse o endereço:
+
+http://localhost:3000
+
+
+A aplicação estará disponível neste endereço enquanto o servidor estiver em execução.
