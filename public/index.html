@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lanches Saudáveis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="../images/logotipo.png" alt="Alimenta+ação">
+  <h1>Lanches Saudáveis,<br> Energia para Estudar!</h1>
+  
+
+  <div class="container_info">
+    <div class="conteudo_info">
+      <p>É um banco de orientações alimentares desenvolvido para apoiar as familias na escolha de Lanches Saudaveis em diferentes contextos do dia a dia, como contraturnos escolares, passeios e momentos de lazer.</p>
+    </div>
+    <div class="conteudo_info">
+      <img src="../images/teste.png" alt="imagem com os principios do projeto">
+    </div>
+  </div>
+
+
+  <p>⚠️<b> O lanche saudavel deve ter até 400 kcal, dentro de uma alimentação equilibrada para jovens.</b></p>
+  <div class="box">
+    <label for="alimento">Escolha um alimento:</label><br>
+    <select id="alimento"></select>
+    <br>
+    <button onclick="adicionarAlimento()">Adicionar</button>
+    <button onclick="limparLancheira()">Limpar Lancheira</button>
+
+    <h3>Lancheira Atual</h3>
+    <ul id="lancheira"></ul>
+    <p id="total"></p>
+    <p id="mensagem"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
