@@ -46,13 +46,20 @@ function atualizarLancheira() {
   document.getElementById("total").textContent = `Total de Calorias: ${totalKcal} kcal`;
 
   const msg = document.getElementById("mensagem");
+
   if (totalKcal === 0) {
     msg.textContent = "";
-  } else if (totalKcal <= 400) {
-    msg.textContent = "✅ Parabéns, você fez ótimas escolhas!";
-    msg.className = "sucesso";
+    // 🔴 Esconde a lancheira quando estiver vazia
+    document.getElementById("lancheira-container").style.display = "none";
   } else {
-    msg.textContent = "⚠️ Atenção: ultrapassou o limite de 400 kcal!";
-    msg.className = "alerta";
+    document.getElementById("lancheira-container").style.display = "block";
+
+    if (totalKcal <= 400) {
+      msg.textContent = "✅ Parabéns, você fez ótimas escolhas!";
+      msg.className = "sucesso";
+    } else {
+      msg.textContent = "⚠️ Atenção: ultrapassou o limite de 400 kcal!";
+      msg.className = "alerta";
+    }
   }
 }
