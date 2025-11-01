@@ -2,65 +2,89 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Lanches Saudáveis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lancheira Inteligente - Energia para Estudar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
-
-
-
-
-
-
- 
-  <div class="conteudo">
-    <img class="logotipo" src="images/logotipo.png" alt="Alimenta+ação">
-    <h1>Lanches Saudáveis,<br> Energia para Estudar!</h1>
-    
-
-    <div class="container_info">
-      <div class="conteudo_info">
-        <p class="texto_conteudo"> <b>É um banco de orientações alimentares desenvolvido para apoiar as familias na escolha 
-          de Lanches Saudaveis em diferentes contextos do dia a dia, como contraturnos escolares, passeios
-          e momentos de lazer.</b></p>
-      </div>
-      <div class="conteudo_info">
-        <img class="conteudo_imagem"  src="images/teste.png" alt="imagem com os principios do projeto">
-      </div>
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
+  <main class="conteudo">
+    <header class="cabecalho">
+        <img class="logotipo" src="images/logotipo.png" alt="Alimenta+ação - Logotipo">
+        <h1>Lanches Saudáveis, Energia para estudar!</h1>
+    </header>
 
-    <p>⚠️<b> O lanche saudavel deve ter até 400 kcal, dentro de uma alimentação equilibrada para jovens.</b></p>
-    <div class="box">
-      <label for="alimento">Escolha um alimento:</label><br>
-      <select id="alimento"></select>
-      <br>
-      <button onclick="adicionarAlimento()">Adicionar</button>
-      <button onclick="limparLancheira()">Limpar Lancheira</button>
-
-      <div id="lancheira-container" style="display: none;">
-        <h3>Lancheira Atual</h3>
+    <section id="landing-section">
+        <section id="info-section" class="container_info"> 
+            <div class="conteudo_info texto">
+                <p class="texto_conteudo"> 
+                    É um banco de orientações alimentares desenvolvido para apoiar famílias 
+                    na escolha de Lanches Saudáveis em diferentes contextos do dia a dia, como contraturnos 
+                    escolares, passeios e momentos de lazer, garantindo sempre o melhor para nossos futuros adultos.
+                </p>
+            </div>
+            <div class="conteudo_info imagem">
+                <img class="conteudo_imagem"  src="images/teste.png" alt="Princípios de alimentação saudável">
+            </div>
+        </section>
         
-      </div>
+        <div class="botoes-acao">
+            <button id="btn-iniciar" class="btn-iniciar" onclick="iniciarMontagem()">
+                <i class="fas fa-rocket"></i> INICIAR MONTAGEM DA LANCHEIRA
+            </button>
+        </div>
+    </section>
 
+    <div id="main-content" class="box-container hidden"> 
+        
+        <section class="box box-alimentos">
+            <h2>🍴 Escolha os Alimentos</h2>
+            <p class="aviso">
+                Clique nas categorias para filtrar.
+            </p>
 
-      <ul id="lancheira"></ul>
-      <p id="total"></p>
-      <p id="mensagem"></p>
+            <div id="categorias-container" class="categorias-container">
+                </div>
+            
+            <div id="alimentos-lista" class="alimentos-lista">
+                </div>
+            
+        </section>
+
+        <section class="box box-lancheira">
+            <h2>🎒 Sua Lancheira Inteligente</h2>
+            <div class="aviso-kcal">
+                ⚠️ **Limite:** até **400 kcal**
+            </div>
+
+            <div id="lancheira-container" class="lancheira-container">
+                <ul id="lancheira"></ul>
+            </div>
+            
+            <p id="total" class="total"></p>
+            
+            <div class="botoes-acao">
+                <button class="btn-limpar" onclick="limparLancheira()">Limpar Tudo</button>
+            </div>
+
+            <p id="mensagem" class="mensagem"></p>
+        </section>
+        
     </div>
-  </div>
+  </main>
   
-
   <script src="script.js"></script>
 </body>
 </html>
