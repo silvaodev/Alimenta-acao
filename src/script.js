@@ -16,7 +16,7 @@ const icones = {
 
 
 
-fetch('alimentos.json')
+fetch('/alimentos.json')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -227,3 +227,6 @@ function atualizarLancheira() {
     }
 }
 
+window.iniciarMontagem = iniciarMontagem;
+window.removerAlimento = removerAlimento;
+window.limparLancheira = limparLancheira;

@@ -4,7 +4,6 @@
   "description": "Alimenta + Ação: software de apoio à montagem de lanches saudáveis",
   "main": "src/server.js",
   "scripts": {
-    "prebuild": "chmod +x node_modules/.bin/vite",
     "build": "vite build",
     "dev": "vite"
   },
