@@ -80,10 +80,24 @@
             </div>
 
             <p id="mensagem" class="mensagem"></p>
+
+            <button id="voltarpagina" class="btn-voltar">Voltar 🏠</button>
+
+            
         </section>
         
     </div>
   </main>
+
+  
+
+    <script>
+        const voltarpagina = document.getElementById('voltarpagina');
+
+        voltarpagina.addEventListener('click', () => {
+            window.location.reload();
+        });
+    </script>
   
   <script type="module" src="./src/script.js"></script>
 </body>

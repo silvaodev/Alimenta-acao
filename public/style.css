@@ -258,7 +258,7 @@ ul { list-style: none; padding: 0; }
 
 
 .btn-limpar {
-  background: #ef4444; 
+  background: #dc2626; 
   color: white;
   width: 100%;
   padding: 18px; 
@@ -266,9 +266,22 @@ ul { list-style: none; padding: 0; }
   font-size: 1.1rem;
 }
 .btn-limpar:hover {
-  background: #dc2626;
+  background: #ef4444;
 }
-
+.btn-voltar {
+  background: #064e3b; 
+  color: white;
+  width: 30%;
+  padding: 10px; 
+  border-radius: 10px;
+  font-size: 0.7rem;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 20px
+}
+.btn-voltar:hover {
+  background: #0b7156;
+}
 
 .remover-item-btn {
     background: none; 
